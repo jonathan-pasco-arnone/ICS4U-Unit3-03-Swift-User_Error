@@ -16,14 +16,15 @@ class MrCoxallStack {
     }
 
     // pops the top value of the stack
-    func pop() -> String {
-        let returnValue: String
+    func pop() -> Int {
+        let returnValue: Int
         if stackAsArray.count > 0 {
+            let poppedNumber: Int = stackAsArray[0]
             stackAsArray.remove(at: 0)
-            returnValue = "yes"
+            returnValue = poppedNumber
         } else {
             print("Stack is empty, cannot pop")
-            returnValue = "no"
+            returnValue = -1
         }
         return returnValue
     }

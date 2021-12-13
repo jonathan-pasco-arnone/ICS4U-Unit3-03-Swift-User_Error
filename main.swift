@@ -19,7 +19,7 @@ enum MyError: Error {
 // Variables/Constants.
 let aStack: MrCoxallStack = MrCoxallStack()
 let addedNewNumber: String = "Added"
-let popNumber: String = "Popped the top number"
+let popNumber: String = "Popped "
 let newStack: String = "\nNew Stack"
 let failedPush: String = "Cannot add to stack, it is not an integer"
 
@@ -81,8 +81,9 @@ do {
 */
 print("\n----- Pop -------\n")
 
-if aStack.pop() == "yes" {
-    print(popNumber)
+let poppedNumber: Int = aStack.pop()
+if poppedNumber != -1 {
+    print(popNumber, poppedNumber)
     print(newStack)
     aStack.showStack()
 }
